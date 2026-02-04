@@ -1,18 +1,30 @@
 # Claude Code: Project Memory
 
-You are working in `claude-loop-systems-demo`.
+You are working in `claude-loop-systems-demo` (Next.js + TypeScript).
 
 Goal
-- Build a robust systems-engineering loop where Markdown is the system:
-  - memory files define constraints and priorities
+- Build a small but robust development loop where Markdown is the system:
+  - GitHub issues are the input contract
   - agents define roles
-  - skills define repeatable workflows
+  - skills standardize repeatable actions
+  - verification is the primary signal
+
+Non-negotiables
+- All work starts from a GitHub issue #N using the "Change request" template.
+- Do not proceed without:
+  - acceptance criteria in the issue
+  - explicit verification commands in the issue
+- Definition of done:
+  - acceptance criteria satisfied
+  - `npm run verify` passes (lint + tests)
+  - reviewer says **APPROVED**
+  - change is committed to `main` with `Fixes #N` (closes the issue)
+  - add exactly one bullet to `LEARNINGS.md`
 
 Working agreement
-- Prefer updating the system docs (memory/rules/agents/skills) before making large code changes.
-- Keep changes small and reversible; avoid refactors unless requested.
-- Make uncertainty explicit. If blocked, ask one short question.
-- Maintain a runnable, fast feedback loop (lint/test) once the TypeScript project exists.
+- Prefer the smallest diff that meets the issue.
+- No scope creep: if something is useful but out of scope, create a follow-up issue.
+- If uncertain, ask one short question and stop.
 
-Additional rules
+Rules
 @.claude/rules/overview.md

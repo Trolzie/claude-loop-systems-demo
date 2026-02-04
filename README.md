@@ -1,33 +1,31 @@
-# Claude Loop Systems
+# Claude Loop Systems (Next.js)
 
-This repo is a real project exploring systems engineering in the age of AI.
+Small Next.js + TypeScript project used to demonstrate systems engineering loops where Markdown is the system.
 
-The core idea: the system is Markdown.
-- Project memory (see `.claude/CLAUDE.md` and `.claude/rules/*.md`)
-- Agents (see `.claude/agents/*.md`)
-- Skills (see `.claude/skills/*/SKILL.md`)
+## The System (Markdown)
 
-We will build a small TypeScript codebase and a maintenance loop that can:
-1) turn a change request into a plan,
-2) implement it,
-3) verify it (tests + lint),
-4) decide: accept / escalate / rollback.
+- Project memory: `.claude/CLAUDE.md`
+- Rules: `.claude/rules/*.md`
+- Agents (roles): `.claude/agents/*.md`
+- Skills (repeatable workflows): `.claude/skills/*/SKILL.md`
 
-## Roadmap (Draft)
+## Workflow (GitHub issues)
 
-- Step 1: Memory - write rules that define what "good" looks like
-- Step 2: Agents - create specialized roles (Planner, Implementer, Reviewer)
-- Step 3: Skills - create repeatable commands (spec, implement, test, fix)
-- Step 4: Loop - run the workflow on the TypeScript project
+1. Create an issue using the "Change request" template.
+2. Architect writes a tiny plan with explicit assumptions.
+3. Implementer makes the smallest change that satisfies acceptance criteria.
+4. Run verification: `npm run verify`.
+5. Reviewer approves.
+6. Commit to `main` with `Fixes #N`.
 
-## Repo Structure
+## Commands
 
-- `.claude/CLAUDE.md`: always-on project memory (what Claude should optimize for)
-- `.claude/rules/`: modular rules referenced by project memory
-- `.claude/agents/`: specialized subagents for different roles
-- `.claude/skills/`: reusable skills (commands) for repeatable workflows
+```bash
+npm install
+npm run dev
+npm run verify   # lint + tests
+```
 
-## Ground Rules
+## Demo Issues
 
-- Prefer small diffs and fast feedback.
-- No hidden magic: each behavior should be encoded in a `.md` file.
+See `docs/demo-issues.md` for two ready-to-copy issue bodies (API then UI).
