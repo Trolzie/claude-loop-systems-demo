@@ -1,5 +1,4 @@
 import { AppHeader } from "@/components/AppHeader";
-import { AppFooter } from "@/components/AppFooter";
 
 export default function Home() {
   return (
@@ -19,8 +18,6 @@ export default function Home() {
           </li>
         </ul>
       </section>
-
-      <AppFooter />
     </main>
   );
 }
