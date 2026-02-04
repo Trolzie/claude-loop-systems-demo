@@ -3,6 +3,7 @@ export async function GET() {
     status: 200,
     headers: {
       "content-type": "application/json",
+      "cache-control": "no-store",
     },
   });
 }

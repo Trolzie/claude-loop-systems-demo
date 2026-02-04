@@ -11,4 +11,10 @@ describe("GET /api/health", () => {
 
     await expect(res.json()).resolves.toEqual({ status: "ok" });
   });
+
+  it("includes no-store cache header", async () => {
+    const res = await GET();
+
+    expect(res.headers.get("cache-control")).toBe("no-store");
+  });
 });
