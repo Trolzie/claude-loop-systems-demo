@@ -3,6 +3,7 @@ name: commit
 description: "Create a commit on main that closes the GitHub issue (Fixes #N) and push it."
 tools: Bash(git *), Bash(gh *), Read
 model: sonnet
+color: gray
 permissionMode: none
 ---
 

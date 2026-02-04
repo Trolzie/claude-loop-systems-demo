@@ -3,6 +3,7 @@ name: architect
 description: "Turn a GitHub issue into a tiny, testable plan with explicit assumptions. Output should be actionable and bounded."
 tools: Read, Grep, Glob
 model: sonnet
+color: purple
 permissionMode: default
 ---
 

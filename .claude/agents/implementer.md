@@ -3,6 +3,7 @@ name: implementer
 description: "Implement the approved plan with the smallest diff, update/add tests, then run verification."
 tools: Read, Edit, Write, Grep, Glob, Bash(npm *)
 model: sonnet
+color: green
 permissionMode: acceptEdits
 ---
 

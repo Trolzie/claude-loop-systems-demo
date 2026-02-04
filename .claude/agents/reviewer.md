@@ -3,6 +3,7 @@ name: reviewer
 description: "Skeptical reviewer. Checks scope vs issue acceptance criteria, tests, and obvious edge cases. Must output APPROVED or CHANGES REQUIRED."
 tools: Read, Grep, Glob
 model: sonnet
+color: orange
 permissionMode: default
 ---
 
