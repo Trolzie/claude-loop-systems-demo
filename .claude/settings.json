@@ -2,7 +2,7 @@
   "hooks": {
     "PreToolUse": [
       {
-        "matcher": "Bash\\(.*\\bgit (commit|push)\\b",
+        "matcher": "Bash\\(.*\\bgit\\b[^\\)]*\\b(?:commit|push)(?:\\b|:)",
         "hooks": [
           {
             "type": "command",
