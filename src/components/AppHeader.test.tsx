@@ -10,4 +10,11 @@ describe("AppHeader", () => {
     expect(screen.getByRole("heading", { name: "Title" })).toBeInTheDocument();
     expect(screen.getByText("Tagline")).toBeInTheDocument();
   });
+
+  it("renders title without tagline", () => {
+    render(<AppHeader title="Title" />);
+
+    expect(screen.getByRole("heading", { name: "Title" })).toBeInTheDocument();
+    expect(screen.queryByText("Tagline")).not.toBeInTheDocument();
+  });
 });

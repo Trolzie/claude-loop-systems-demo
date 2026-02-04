@@ -3,7 +3,7 @@ import { AppHeader } from "@/components/AppHeader";
 export default function Home() {
   return (
     <main style={{ padding: 24, maxWidth: 720, margin: "0 auto" }}>
-      <AppHeader title="Claude Loop Systems" tagline="Markdown is the system." />
+      <AppHeader title="Claude Loop Systems" />
 
       <p style={{ marginTop: 16 }}>
         This is a small Next.js + TypeScript project used to demo Claude Code
