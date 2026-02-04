@@ -11,6 +11,7 @@ Goal
 
 Non-negotiables
 - All work starts from a GitHub issue #N using the "Change request" template.
+- Prefer running the full loop via `/issue-loop` when working from an issue.
 - Do not proceed without:
   - acceptance criteria in the issue
   - explicit verification commands in the issue

@@ -5,7 +5,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 /** @type {import('vitest/config').UserConfigExport} */
-export default {
+const config = {
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -16,3 +16,5 @@ export default {
     setupFiles: ["./vitest.setup.ts"],
   },
 };
+
+export default config;
