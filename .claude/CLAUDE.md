@@ -3,7 +3,7 @@
 You are working in `claude-loop-systems-demo`.
 
 Goal
-- Demonstrate a robust systems-engineering loop where Markdown is the system:
+- Build a robust systems-engineering loop where Markdown is the system:
   - memory files define constraints and priorities
   - agents define roles
   - skills define repeatable workflows
