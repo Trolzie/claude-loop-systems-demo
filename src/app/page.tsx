@@ -1,4 +1,5 @@
 import { AppHeader } from "@/components/AppHeader";
+import { RickCounter } from "@/components/RickCounter";
 
 export default function Home() {
   return (
@@ -9,6 +10,10 @@ export default function Home() {
         This is a small Next.js + TypeScript project used to demo Claude Code
         agents, skills, and an issues-driven development loop.
       </p>
+
+      <section style={{ marginTop: 16 }}>
+        <RickCounter />
+      </section>
 
       <section style={{ marginTop: 16 }}>
         <h2>Endpoints</h2>
