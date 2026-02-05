@@ -9,3 +9,4 @@ Format:
 - 2026-02-04 - #2 - Adding a test alongside header changes ensures the behavior is verified automatically.
 - 2026-02-05 - #4 - Static UI components with no props are simpler to test; use getByRole for semantic elements like links.
 - 2026-02-05 - #5 - Mock global fetch in tests to avoid network calls; vitest.stubGlobal makes it easy to isolate API routes.
+- 2026-02-05 - #6 - Converting to "use client" is safe when tests only check static rendered elements; async behavior can be tested separately.
