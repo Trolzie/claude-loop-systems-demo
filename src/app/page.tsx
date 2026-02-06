@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AppFooter } from "@/components/AppFooter";
 import { AppHeader } from "@/components/AppHeader";
 
@@ -9,6 +9,29 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [names, setNames] = useState<string[]>([]);
+
+  const [ricksCount, setRicksCount] = useState<number | null>(null);
+  const [ricksLoading, setRicksLoading] = useState(true);
+  const [ricksError, setRicksError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchRicksCount = async () => {
+      try {
+        const response = await fetch("/api/rm/alive-ricks-count");
+        if (!response.ok) {
+          throw new Error("Failed to fetch");
+        }
+        const data = await response.json();
+        setRicksCount(data.count);
+      } catch {
+        setRicksError("Error");
+      } finally {
+        setRicksLoading(false);
+      }
+    };
+
+    fetchRicksCount();
+  }, []);
 
   const handleSearch = async () => {
     setLoading(true);
@@ -35,6 +58,10 @@ export default function Home() {
       <p style={{ marginTop: 16 }}>
         This is a small Next.js + TypeScript project used to demo Claude Code
         agents, skills, and an issues-driven development loop.
+      </p>
+
+      <p style={{ marginTop: 16 }}>
+        Alive Ricks: {ricksLoading ? "Loading..." : ricksError ? <span style={{ color: "red" }}>{ricksError}</span> : ricksCount}
       </p>
 
       <section style={{ marginTop: 16 }}>
