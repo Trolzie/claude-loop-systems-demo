@@ -11,3 +11,4 @@ Format:
 - 2026-02-05 - #5 - Mock global fetch in tests to avoid network calls; vitest.stubGlobal makes it easy to isolate API routes.
 - 2026-02-05 - #6 - Converting to "use client" is safe when tests only check static rendered elements; async behavior can be tested separately.
 - 2026-02-06 - #7 - When adding a new API route that mirrors an existing one, copying the exact error-handling and header patterns keeps the codebase consistent and the diff reviewable.
+- 2026-03-10 - #8 - When enhancing an existing component, extending it in-place with inline styles matching the codebase convention avoids introducing new styling paradigms and keeps the diff minimal.
