@@ -17,4 +17,19 @@ describe("AppFooter", () => {
     expect(link).toBeInTheDocument();
     expect(link).toHaveAttribute("href", "/api/health");
   });
+
+  it("renders copyright text", () => {
+    render(<AppFooter />);
+
+    expect(
+      screen.getByText(/© 2026 Claude Loop Systems/),
+    ).toBeInTheDocument();
+  });
+
+  it("renders footer with pink background", () => {
+    const { container } = render(<AppFooter />);
+
+    const footer = container.querySelector("footer");
+    expect(footer?.getAttribute("style")).toContain("background-color: pink");
+  });
 });
