@@ -12,7 +12,7 @@ A demo repo showing how to build AI development loops where **Markdown is the sy
 
 ```bash
 # Clone and install
-git clone https://github.com/<your-user>/claude-loop-systems-demo.git
+git clone https://github.com/Trolzie/claude-loop-systems-demo.git
 cd claude-loop-systems-demo
 npm install
 
